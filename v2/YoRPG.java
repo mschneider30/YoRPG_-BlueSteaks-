@@ -33,6 +33,7 @@ public class YoRPG {
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
+  private String type;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -84,9 +85,28 @@ public class YoRPG {
     }
     catch ( IOException e ) { }
 
-    //instantiate the player's character
-    pat = new Protagonist( name );
+	s= "What is your chosen class?\n";
+	s+="\tW: Warrior\n";
+	s+="\tT: Tank\n";
+	s+="\tS: Soldier\n";
+	System.out.println(s);
+try {
+	type  = in.readLine();
+}
+catch ( IOException e) {}
 
+if (type.equals("W")) {
+
+    //instantiate the player's character
+    pat = new Warrior( name );
+} else if (type.equals("T")) {
+	pat = new Tank ( name );
+} else if (type.equals("S")) {
+	pat = new Soldier ( name );
+} else {
+System.out.println("invalid input, you are now a soldier");
+pat = new Soldier ( name );
+}
   }//end newGame()
 
 
@@ -99,13 +119,18 @@ public class YoRPG {
   public boolean playTurn() {
     int i = 1;
     int d1, d2;
-
+    int mType = (int)(Math.random() * 3.0) + 1;
     if ( Math.random() >= ( difficulty / 3.0 ) )
       System.out.println( "\nNothing to see here. Move along!" );
     else {
       System.out.println( "\nLo, yonder monster approacheth!" );
-
-      smaug = new Monster();
+      if (mType == 1) {
+      smaug = new Witch();
+	} else if (mType == 2) {
+	smaug = new Brute();
+	}else {
+	smaug = new Goblin();
+}
 
       while( smaug.isAlive() && pat.isAlive() ) {
 

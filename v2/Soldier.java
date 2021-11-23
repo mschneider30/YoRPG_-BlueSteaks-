@@ -6,12 +6,5 @@ public class Soldier extends Protagonist{
   attack = .4;
   name = g;
   }
-   public void specialize () {
-     strength=200;
-     defense=20;
-   }
-   public void normalize () {
-   strength=100;
-   defense=40;
-   }
+  
 }

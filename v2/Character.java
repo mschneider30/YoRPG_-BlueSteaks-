@@ -1,11 +1,25 @@
 public class Character {
-  protected int health;
-  protected int strength;
-  protected int defense;
-  protected double attack;
+  public int health;
+  public int strength;
+  public int defense;
+  public double attack;
 
   public boolean isAlive(){
     return health > 0;
+  }
+  public int getDefense () {
+    return defense;
+  }
+  public void lowerHP (int damage) {
+    health = health - damage;
+  }
+  public int attack (Character target) {
+    int damage = ((int)((double)strength*attack))-target.defense;
+    if (damage < 0) {
+      damage = 0;
+    }
+    target.lowerHP(damage);
+    return damage;
   }
 
 }

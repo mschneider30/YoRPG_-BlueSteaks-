@@ -6,12 +6,4 @@ public class Warrior extends Protagonist{
   attack = .8;
   name = g;
   }
-   public void specialize () {
-     strength=400;
-     defense=10;
-   }
-   public void normalize () {
-   strength=200;
-   defense=20;
-   }
 }
