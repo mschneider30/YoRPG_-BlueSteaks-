@@ -1,13 +1,16 @@
 public class Monster extends Character{
-public int health;
+
 public Monster () {
-health = 50;
+health = 150;
+strength = 20 + (int)(Math.random() * 45);
+defense = 20;
+attack = 1;
 }
-public boolean isAlive (){
-return (health > 0);
-}
-public int attack (Protagonist g){
-g.health = g.health - g.taken;
-return g.taken;
-}
+// public boolean isAlive (){
+// return (health > 0);
+// }
+// public int attack (Protagonist g){
+// g.health = g.health - g.taken;
+// return g.taken;
+// }
 }
