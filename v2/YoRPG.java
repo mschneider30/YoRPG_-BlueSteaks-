@@ -151,7 +151,7 @@ pat = new Soldier ( name );
 
         d1 = pat.attack( smaug );
         d2 = smaug.attack( pat );
-
+        pat.normalize();
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
 

@@ -1,8 +1,8 @@
 public class Brute extends Monster {
 public Brute () {
-health = 300;
-strength = 10 + (int)(Math.random() * 22);
-defense = 40;
-attack = .5;
+health = 70;
+strength = (int)(Math.random() * 50);
+defense = 12;
+attack = .25;
 }
 }

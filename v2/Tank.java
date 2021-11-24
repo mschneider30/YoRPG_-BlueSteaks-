@@ -1,10 +1,10 @@
 public class Tank extends Protagonist{
   public Tank (String g) {
-  health = 250;
-  strength = 50;
-  defense = 80;
-  attack = .2;
-  name = g;
+    health = 150;
+    strength = (int)(Math.random()*60);
+    defense = 15;
+    attack = .25;
+    name = g;
   }
- 
+
 }

@@ -1,9 +1,9 @@
 public class Warrior extends Protagonist{
   public Warrior (String g) {
-  health = 62;
-  strength = 200;
-  defense = 20;
-  attack = .8;
+  health = 50;
+  strength = (int)(Math.random()*80);
+  defense = 5;
+  attack = .75;
   name = g;
   }
 }
