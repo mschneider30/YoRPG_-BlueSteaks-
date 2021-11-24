@@ -22,5 +22,4 @@ public class Character {
     target.lowerHP(damage);
     return damage;
   }
-
 }
