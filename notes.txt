@@ -1,0 +1,17 @@
+v0:
+    Work through the errors.
+    A lot of the stuff in Monster is in Protagonist.
+    If you add a defense stat to Protagonist you don't need to attack in Monster
+
+v1:
+  Scratch that.
+  The duplicates should use a superclass.
+  This means that all stats need to apply to both.
+  However, we do not need any dedicated methods other than getName
+
+v2:
+  We can use another level of subclasses to add more variety.
+  We can use the scanner and readLine to get inputs and set the Character type.
+  We also need to make sure that all the subclasses are appropriately named and extended.
+  If we use variable multipliers to determine differences between characters, we only need constructors in the subclasses.
+  This simplifies every thing while still keeping it interesting.
