@@ -14,7 +14,7 @@ public class Character {
     health = health - damage;
   }
   public int attack (Character target) {
-    double chance = Math.random()/2 + .5;
+    double chance = Math.random()/2 + .75;
     int damage = (int)(chance*((double)strength*attack))-target.defense;
     if (damage < 0) {
       damage = 0;
